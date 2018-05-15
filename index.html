@@ -1,0 +1,23 @@
+@Service
+class AddListService implements AddArray {
+
+
+    /*
+        @RequestMapping(value = "/addData", method = RequestMethod.GET)
+        @ApiOperation(value = "输入数据并可以进行添加数据", notes = "可输入3个数据")
+        @ApiImplicitParams({
+        })
+        */
+
+    @RequestMapping(value ="/addData", method= RequestMethod.GET)
+    @ApiOperation(value="输入数据并可以进行添加数据", notes="可输入3个数据")
+    @ApiImplicitParams({
+    })
+
+    @Override
+    public void addListService(String addData01, String addData02, String addData03) {
+        ListArray.strNum01.add(addData01);
+        ListArray.strNum01.add(addData02);
+        ListArray.strNum01.add(addData03);
+    }
+}
